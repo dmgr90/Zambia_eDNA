@@ -1,4 +1,4 @@
-
+#This file contain the script used to trimm primers, remove chimeric sequences, dereplicate, quality filtering and OTU clustering. Used for both #Illumina and nanopore datasets
 threads=${SLURM_CPUS_PER_TASK:-32}
 
 
