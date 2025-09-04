@@ -1,4 +1,5 @@
-# ── paths ───────────────────────────────────────────────────────────────
+#Global alignment script for taxonomic assignment of OTUS
+
 db_dir="/path/to/database"
 db_zip="/path/MIDORI2_UNIQ_NUC_GB266_srRNA_BLAST.fasta.zip"
 db_fasta="${db_dir}/MIDORI2_UNIQ_NUC_GB266_srRNA_BLAST.fasta"   
@@ -7,7 +8,6 @@ udb="${db_dir}/MIDORI2_UNIQ_NUC_GB266_srRNA_BLAST.udb"
 fastaDir="otu_fasta"
 threads=32
 
-# ── unzip the BLAST database if needed ──────────────────────────────────
 if [[ ! -s "$db_fasta" || "$db_zip" -nt "$db_fasta" ]]; then
   echo "[INFO] Unzipping $db_zip → $db_fasta"
   unzip -p "$db_zip" > "$db_fasta"
